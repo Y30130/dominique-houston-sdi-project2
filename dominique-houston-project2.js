@@ -7,13 +7,15 @@
 /*
 A recording artist var recordingArist = "Britney Spears" is going on tour and will be performing one secret show per month for one year. showsPerYear = 12. monthsOfTheYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"].
 
-Every night she must perform for fans var performShow = function (daysOfTheWeek). At the end of every day she would like to know how many shows are left while var (showsRemain > 0), so please inform her immediately.
+Currently Britney Spears is the only artist doing such tour, so if you provide any other artist name, we will not be able to fully assist you at this time if (recordingAritst == "Britney Spears"). We will need to verify that she is going to be near the location you provide, and also check to see if tickets are still availble. (Boolean function)
 
-For each day that has passed, the number of shows left will decrease (var showNumber = 0; showNumber < daysOfTheWeek.length; showNumber++).
+For each month that has passed, the number of shows left will decrease. (Number function and while loop)
 
-You are not to look at her nor are you allowed to respond directly to her, you must relayMessageTo = function(person,message){...}, to which you will normally receive a reply along the lines of recordingArtist + " says thank you."
+We will itemize each month and the number of shows she will perform to clear up any confusion. (Array function and For Loop)
 
-Though you may get used to it, you won't be able to help by wonder if (staff.talkToHer()) when she responds.
+We believe in taking chances, so we have create a new month "Nevember" to celebrate the release of Britney's new album. (Array Function and For Loop)
+
+We will offer a free download after your ticket purchase. (String Function)
 */
 
 
@@ -33,7 +35,7 @@ var seasons = ["Winter","Spring","Summer","Fall"];
 
 
 // Convert Consolge Log into it's on Function, "Say"
-var say = function(message) {console.log(message);};
+var say = function(message) {console.log(message);}
 
 // My procedure 
 if (recordingArtist == "Britney Spears") {
@@ -64,7 +66,7 @@ var checkShowStatus = function(inCity,showsBooked) {
 	}
 }
 
-
+//
 // My number function + While Loop
 // Loop and count down how many concerts are left
 var showCountdown = function (shows) {
@@ -91,8 +93,9 @@ var showCountdown = function (shows) {
 	return countShows;
 }
 
+//
 // My array function + For Loop
-
+// 
 var songCountUp = function(weeksPerforming,monthsOfTheYear) {
 	songCount = monthsOfTheYear.push("Nevember");
 	for (var i = 0; i < monthsOfTheYear.length; i++){
@@ -109,22 +112,24 @@ var songCountUp = function(weeksPerforming,monthsOfTheYear) {
 // String function
 
 var offerDownload = function(freeSong,freeVideo) {
-	downloadMessage = console.log("Download " + freeSong + " or " + freeVideo);
+	downloadMessage = "Download " + freeSong + " or " + freeVideo + " for free.";
+	
 	return downloadMessage;
 	}
 
+/////////////////////////////////////////////////////////////////////////////////////////////
 
 // Function Execution
-checkShowStatus(true,true); // toggle boolean values to return different outputs
+checkShowStatus(true,true); // Boolean Function (toggle values to output different results)
 showCountdown(12); // Number Function & While Loop
 songCountUp(1,monthsOfTheYear); // Array Function & For Loop
-say(offerDownload("Ooh La La","Scream & Shout")); // String Function 
-
+offerDownload("Ooh La La","Scream & Shout");
 
 // Returned Values
 say(verifiedShow); // Returned Value from Boolean Function
 say(songCount); // Returned Numerical Value from my Array Loop
 say(monthsOfTheYear.push("Nevember")); // Pushing and returning from the array function and for loop
 say(countShows); // Returned Value from my For While Loop
-say();
-say();
+say(downloadMessage); // Returned Value from String Function
+
+// Combined Output to compose story
