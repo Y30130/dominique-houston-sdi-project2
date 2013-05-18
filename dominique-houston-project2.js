@@ -81,11 +81,11 @@ var showCountdown = function (shows) {
 			say(shows + " left on the tour.");
 			if (shows == 1) {
 			say("");
-					say("This is the last show. Give it all you've got!");
+					say("This is the last show. Hope you've got your tickets!");
 				}
 		} 
 		else {
-			say("We have reached the end of the tour. Congratuluations on your success, Britney!");
+			say("We have reached the end of the tour. 	" + recordingArtist +" sends thanks!");
 		}
 		say(" ");
 	
@@ -96,17 +96,17 @@ var showCountdown = function (shows) {
 //
 // My array function + For Loop
 // 
-var songCountUp = function(weeksPerforming,monthsOfTheYear) {
-	songCount = monthsOfTheYear.push("Nevember");
+var showCountUp = function(weeksPerforming,monthsOfTheYear) {
+	showNumber = monthsOfTheYear.push("Nevember");
 	for (var i = 0; i < monthsOfTheYear.length; i++){
-		say("You will be performing " + weeksPerforming + " show this " + monthsOfTheYear[i] + ".");
+		say(recordingArtist + " will be performing " + weeksPerforming + " show this " + monthsOfTheYear[i] + ".");
 		
 		if (i > monthsOfTheYear) {
 			say("There are still upcoming performances.");
 		}
 		say(" ");
 	}
-	return songCount;
+	return showNumber;
 }
 
 // String function
@@ -122,14 +122,11 @@ var offerDownload = function(freeSong,freeVideo) {
 // Function Execution
 checkShowStatus(true,true); // Boolean Function (toggle values to output different results)
 showCountdown(12); // Number Function & While Loop
-songCountUp(1,monthsOfTheYear); // Array Function & For Loop
+showCountUp(1,monthsOfTheYear); // Array Function & For Loop
 offerDownload("Ooh La La","Scream & Shout");
 
 // Returned Values
-say(verifiedShow); // Returned Value from Boolean Function
-say(songCount); // Returned Numerical Value from my Array Loop
-say(monthsOfTheYear.push("Nevember")); // Pushing and returning from the array function and for loop
-say(countShows); // Returned Value from my For While Loop
+say("It is " + verifiedShow + " that the show has been verified in your area."); // Returned Value from Boolean Function
+say("There will be " + showNumber + " shows total."); // Returned Numerical Value from my Array Loop
+say("With the addition of the new month, there will be " + showNumber + " shows."); // Returned Value from my For While Loop
 say(downloadMessage); // Returned Value from String Function
-
-// Combined Output to compose story
