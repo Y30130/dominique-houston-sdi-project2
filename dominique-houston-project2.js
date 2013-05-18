@@ -116,16 +116,15 @@ var offerDownload = function(freeSong,freeVideo) {
 
 // Function Execution
 checkShowStatus(true,true); // toggle boolean values to return different outputs
-showCountdown(12); // edit numerical value to change output
-songCountUp(1,monthsOfTheYear); // For Loop with Array
-say(verifiedShow); // returning that boolean on em
-say(monthsOfTheYear.push("Nevember")); // Pushing and returning from the array function and for loop
-say("My return valued for my number function is " + countShows + "."); // Doing something with returned value of my while loop and number function
-say(songCount); // Doing something with a return value of my array and for loop 
+showCountdown(12); // Number Function & While Loop
+songCountUp(1,monthsOfTheYear); // Array Function & For Loop
 say(offerDownload("Ooh La La","Scream & Shout")); // String Function 
 
 
 // Returned Values
-say();
+say(verifiedShow); // Returned Value from Boolean Function
+say(songCount); // Returned Numerical Value from my Array Loop
+say(monthsOfTheYear.push("Nevember")); // Pushing and returning from the array function and for loop
+say(countShows); // Returned Value from my For While Loop
 say();
 say();
